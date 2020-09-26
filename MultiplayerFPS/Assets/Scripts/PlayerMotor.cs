@@ -35,9 +35,9 @@ public class PlayerMotor : MonoBehaviour
     }
 
     // Gets a camera rotation vector
-    public void RotateCamera(float _cameraRotation)
+    public void RotateCamera(float _cameraRotationX)
     {
-        cameraRotationX = _cameraRotation;
+        cameraRotationX = _cameraRotationX;
     }
 
     // Get a force vector for our thrusters
@@ -74,7 +74,7 @@ public class PlayerMotor : MonoBehaviour
         {
             // Set our rotation and clamp it
             currentCameraRotationX -= cameraRotationX;
-            currentCameraRotationX = Mathf.Clamp(cameraRotationX, -cameraRotationLmit, cameraRotationLmit);
+            currentCameraRotationX = Mathf.Clamp(currentCameraRotationX, -cameraRotationLmit, cameraRotationLmit);
 
             //Apply our rotation to the transform of our camera
             cam.transform.localEulerAngles = new Vector3(currentCameraRotationX, 0f, 0f);
