@@ -14,23 +14,23 @@ public class PlayerSetup : NetworkBehaviour
     Camera sceneCamera;
     private void Start()
     {
-        if(!isLocalPlayer)
+        // Disable components that should only be
+        // Active on the player that we control
+        if (!isLocalPlayer)
         {
-            for (int i = 0; i < componentsToDisable.Length; i++)
-            {
-                DisableComponents();
-                AssignRemoteLayer();
-            }
+            DisableComponents();
+            AssignRemoteLayer();
         }
         else
         {
+            // We are the local player: Disable the scene camera
             sceneCamera = Camera.main;
             if (sceneCamera != null)
             {
                 sceneCamera.gameObject.SetActive(false);
-            }   
+            }
         }
-
+        GetComponent<Player>().Setup();
     }
 
     public override void OnStartClient()

@@ -430,12 +430,12 @@ MonoBehaviour:
   syncInterval: 0.1
   weapon:
     name: Glock
-    damage: 10
+    damage: 40
     range: 200
   cam: {fileID: 6188908361254286585}
   mask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 567
 --- !u!114 &3549092110092754478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,6 +448,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 700bcfc6cec0027418fea8f0f6d9088e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  maxHealth: 100
+  disableOnDeath:
+  - {fileID: 6188908360895952197}
+  - {fileID: 4862682795685240926}
 --- !u!1 &6188908361254286587
 GameObject:
   m_ObjectHideFlags: 0
