@@ -74,6 +74,7 @@
     <None Include="Assets\ScriptTemplates\54-Mirror__Network Room Manager-NewNetworkRoomManager.cs.txt" />
     <None Include="Assets\ScriptTemplates\55-Mirror__Network Room Player-NewNetworkRoomPlayer.cs.txt" />
     <None Include="Assets\Mirror\Readme.txt" />
+    <None Include="Assets\multiplayer-fps-assets\README.txt" />
     <None Include="Assets\Mirror\version.txt" />
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\License.txt" />
     <None Include="Assets\ScriptTemplates\56-Mirror__Network Discovery-NewNetworkDiscovery.cs.txt" />
@@ -644,6 +645,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{A58E4CFF-7604-98D8-1877-1A6FC496CF9A}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
     <ProjectReference Include="Mirror.Weaver.csproj">
       <Project>{E27F89A9-1C57-2934-1A2E-C85906457904}</Project>
       <Name>Mirror.Weaver</Name>
