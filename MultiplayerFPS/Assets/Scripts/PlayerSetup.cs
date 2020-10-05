@@ -23,9 +23,9 @@ public class PlayerSetup : NetworkBehaviour
 
     [SerializeField]
     GameObject playerUIPrefab;
-    private GameObject playerUIInstance;
+    [HideInInspector]
+    public GameObject playerUIInstance;
 
-    Camera sceneCamera;
     private void Start()
     {
         // Disable components that should only be
@@ -37,13 +37,6 @@ public class PlayerSetup : NetworkBehaviour
         }
         else
         {
-            // We are the local player: Disable the scene camera
-            sceneCamera = Camera.main;
-            if (sceneCamera != null)
-            {
-                sceneCamera.gameObject.SetActive(false);
-            }
-
             // Disable player graphics for local player
             SetLayerRecursively(playerGraphics, LayerMask.NameToLayer(dontDrawLayerName));
 
@@ -98,10 +91,7 @@ public class PlayerSetup : NetworkBehaviour
     {
         Destroy(playerUIInstance);
 
-        if(sceneCamera != null)
-        {
-            sceneCamera.gameObject.SetActive(false);
-        }
+        GameManager.instance.SetSceneCameraActive(true);
 
         GameManager.UnRegisterPlayer(transform.name);
     }

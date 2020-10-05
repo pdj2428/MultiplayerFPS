@@ -14,7 +14,7 @@ TagManager:
   - 
   - 
   - LocalPlayerLayer
-  - RemotePlayerLayer
+  - RemotePlayer
   - DontDraw
   - Weapon
   - CollidableEnvironment
