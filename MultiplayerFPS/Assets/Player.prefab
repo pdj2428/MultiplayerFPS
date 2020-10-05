@@ -182,7 +182,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1463520079572873706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3312838725908532502}
@@ -215,13 +215,13 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 70
+  field of view: 50
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 823
+    m_Bits: 4919
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -345,6 +345,11 @@ MonoBehaviour:
   speed: 5
   lookSensitivity: 5
   thrusterforce: 1300
+  thrusterFuelBurnSpeed: 1
+  thrusterFuelRegenSpeed: 0.3
+  environmentMask:
+    serializedVersion: 2
+    m_Bits: 4096
   jointSpring: 20
   jointMaxForce: 40
 --- !u!114 &497845752174530625
@@ -538,7 +543,7 @@ MonoBehaviour:
   cam: {fileID: 1463520079572873704}
   mask:
     serializedVersion: 2
-    m_Bits: 567
+    m_Bits: 4663
 --- !u!114 &8137147899821579071
 MonoBehaviour:
   m_ObjectHideFlags: 0

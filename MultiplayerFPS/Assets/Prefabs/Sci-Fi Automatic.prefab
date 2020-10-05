@@ -9547,7 +9547,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   muzzleFalsh: {fileID: 5279269730003388798}
-  hitEffectPrefab: {fileID: 0}
+  hitEffectPrefab: {fileID: 8114501030153609875, guid: 81a1b40432fa78d47b3f12cc4e857e51,
+    type: 3}
 --- !u!1 &6837364715200539886
 GameObject:
   m_ObjectHideFlags: 0

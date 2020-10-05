@@ -40,7 +40,7 @@ public class PlayerShoot : NetworkBehaviour
         }
         else
         {
-            if(Input.GetButtonDown("Fire1"))
+            if(Input.GetButtonDown  ("Fire1"))
             {
                 InvokeRepeating("Shoot", 0f, 1f/currentWeapon.fireRate);
             }
@@ -66,6 +66,23 @@ public class PlayerShoot : NetworkBehaviour
         weaponManager.GetCurrentGraphics().muzzleFalsh.Play();
     }
 
+    //Is called on the server when we hit something
+    //Take in the hit point and the normal of the surface
+    [Command]
+    void CmdOnHit (Vector3 _pos, Vector3 _normal)
+    {
+        RpcDoHitEffect(_pos, _normal);
+    }
+
+    //Is called on all clients
+    //Here we can spawn in cool effects
+    [ClientRpc]
+    void RpcDoHitEffect(Vector3 _pos, Vector3 _normal)
+    {
+        GameObject _hitEffect = (GameObject)Instantiate(weaponManager.GetCurrentGraphics().hitEffectPrefab, _pos, Quaternion.LookRotation(_normal));
+        Destroy(_hitEffect, 2f);
+    }
+
     [Client]
     void Shoot ()
     {
@@ -85,6 +102,9 @@ public class PlayerShoot : NetworkBehaviour
             {
                 CmdPlayerShot(_hit.collider.name, currentWeapon.damage);
             }
+
+            // We hit something, call the OnHit method on the Server
+            CmdOnHit(_hit.point, _hit.normal);
         }
     }
 
