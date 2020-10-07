@@ -63,14 +63,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\PlayerUI.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\HostGame.cs" />
     <Compile Include="Assets\Scripts\MatchSettings.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerMotor.cs" />
     <Compile Include="Assets\Scripts\PlayerSetup.cs" />
     <Compile Include="Assets\Scripts\PlayerShoot.cs" />
+    <Compile Include="Assets\Scripts\PlayerUI.cs" />
     <Compile Include="Assets\Scripts\PlayerWeapon.cs" />
     <Compile Include="Assets\Scripts\Util.cs" />
     <Compile Include="Assets\Scripts\WeaponGraphics.cs" />

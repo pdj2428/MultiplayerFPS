@@ -1231,6 +1231,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8767045733096476321, guid: 3609d957ec2baea47b9d22e907c9f792,
+        type: 3}
+      propertyPath: playerSpawnMethod
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8767045733096476323, guid: 3609d957ec2baea47b9d22e907c9f792,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1291,5 +1296,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: _NetworkManager
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 3609d957ec2baea47b9d22e907c9f792, type: 3}
