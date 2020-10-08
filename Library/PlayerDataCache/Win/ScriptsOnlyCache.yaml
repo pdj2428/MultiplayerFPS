@@ -132,7 +132,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12146}
     - Class: 114
-      Script: {instanceID: 15902}
+      Script: {instanceID: 12210}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1559,6 +1559,12 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
+      Hash: 6a1524c4e47ba97bbad431a624062e2d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HostGame
+  - hash:
+      serializedVersion: 2
       Hash: 4c790fa3b7c93033baa4406ca5ac8c04
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.MultipleAdditiveScenes
@@ -1581,12 +1587,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
     className: AutoMobileShaderSwitch
-  - hash:
-      serializedVersion: 2
-      Hash: 6a1524c4e47ba97bbad431a624062e2d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: HostGame
   platform: 5
   scenePathNames:
   - Assets/Lobby.unity

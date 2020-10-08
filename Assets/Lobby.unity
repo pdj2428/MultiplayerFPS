@@ -129,8 +129,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8767045733096476321, guid: 3609d957ec2baea47b9d22e907c9f792,
         type: 3}
+      propertyPath: spawnPrefabs.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8767045733096476321, guid: 3609d957ec2baea47b9d22e907c9f792,
+        type: 3}
       propertyPath: dontDestroyOnLoad
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8767045733096476321, guid: 3609d957ec2baea47b9d22e907c9f792,
+        type: 3}
+      propertyPath: runInBackground
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8767045733096476322, guid: 3609d957ec2baea47b9d22e907c9f792,
+        type: 3}
+      propertyPath: showGUI
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8767045733096476323, guid: 3609d957ec2baea47b9d22e907c9f792,
         type: 3}
@@ -941,7 +956,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 182550155}
         m_MethodName: SetJoinRoomName
-        m_Mode: 0
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
