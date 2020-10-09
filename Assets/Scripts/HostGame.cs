@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 using Mirror;
 using System.Net.Sockets;
 using UnityEngine.XR.WSA.Input;
+using UnityEngine.UI;
 
 public class HostGame : MonoBehaviour
 {
@@ -14,6 +14,7 @@ public class HostGame : MonoBehaviour
     private string createRoomName;
     private string joinRoomName;
 
+    [SerializeField]
     private NetworkManager networkManager;
 
     private bool host = false;
@@ -31,13 +32,12 @@ public class HostGame : MonoBehaviour
 
     private void Update()
     {
-
-        if (SceneManager.GetActiveScene().name != LobbySceneName && networkManager.networkAddress != createRoomName && host)
+        if (networkManager.networkAddress != createRoomName && host)
         {
             networkManager.maxConnections = roomSize;
             networkManager.networkAddress = createRoomName;
         }
-        else if (SceneManager.GetActiveScene().name != LobbySceneName && networkManager.networkAddress != createRoomName && client)
+        else if (networkManager.networkAddress != createRoomName && client)
         {
             networkManager.networkAddress = joinRoomName;
         }

@@ -128,17 +128,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1000010584418298, guid: de0a1040bbb28b944be715c4bbc28d52, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011632363320, guid: de0a1040bbb28b944be715c4bbc28d52, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012753233592, guid: de0a1040bbb28b944be715c4bbc28d52, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013072335404, guid: de0a1040bbb28b944be715c4bbc28d52, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 1000013792291702, guid: de0a1040bbb28b944be715c4bbc28d52, type: 3}
       propertyPath: m_Name
       value: Arena
       objectReference: {fileID: 0}
     - target: {fileID: 4000011712752238, guid: de0a1040bbb28b944be715c4bbc28d52, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.08
+      value: 1.08
       objectReference: {fileID: 0}
     - target: {fileID: 4000012032224554, guid: de0a1040bbb28b944be715c4bbc28d52, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.28
+      value: 1.28
       objectReference: {fileID: 0}
     - target: {fileID: 4000012914622062, guid: de0a1040bbb28b944be715c4bbc28d52, type: 3}
       propertyPath: m_LocalPosition.x
@@ -186,11 +202,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013159367612, guid: de0a1040bbb28b944be715c4bbc28d52, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.41
+      value: 1.41
       objectReference: {fileID: 0}
     - target: {fileID: 4000013398278290, guid: de0a1040bbb28b944be715c4bbc28d52, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.49
+      value: 1.49
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de0a1040bbb28b944be715c4bbc28d52, type: 3}

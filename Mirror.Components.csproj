@@ -281,6 +281,12 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="DatabaseControl">
+      <HintPath>C:/Users/dj521/OneDrive/Desktop/MultiPlayerFPS/MultiplayerFPS/Assets/Database Control Free/Scripts/DatabaseControl.dll</HintPath>
+    </Reference>
+    <Reference Include="DatabaseControlEditor">
+      <HintPath>C:/Users/dj521/OneDrive/Desktop/MultiPlayerFPS/MultiplayerFPS/Assets/Database Control Free/Scripts/Editor/DatabaseControlEditor.dll</HintPath>
+    </Reference>
     <Reference Include="Mono.CecilX">
       <HintPath>C:/Users/dj521/OneDrive/Desktop/MultiPlayerFPS/MultiplayerFPS/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.dll</HintPath>
     </Reference>
@@ -292,12 +298,6 @@
     </Reference>
     <Reference Include="Mono.CecilX.Rocks">
       <HintPath>C:/Users/dj521/OneDrive/Desktop/MultiPlayerFPS/MultiplayerFPS/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll</HintPath>
-    </Reference>
-    <Reference Include="DatabaseControl">
-      <HintPath>C:/Users/dj521/OneDrive/Desktop/MultiPlayerFPS/MultiplayerFPS/Assets/Database Control Free/Scripts/DatabaseControl.dll</HintPath>
-    </Reference>
-    <Reference Include="DatabaseControlEditor">
-      <HintPath>C:/Users/dj521/OneDrive/Desktop/MultiPlayerFPS/MultiplayerFPS/Assets/Database Control Free/Scripts/Editor/DatabaseControlEditor.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Unity/2019.2.17f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
