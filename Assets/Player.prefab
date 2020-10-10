@@ -320,6 +320,7 @@ GameObject:
   - component: {fileID: 2622287531915289301}
   - component: {fileID: 5858793288851788480}
   - component: {fileID: 475903362787413949}
+  - component: {fileID: 6872994312075610740}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -445,6 +446,7 @@ MonoBehaviour:
   - {fileID: 1463520079572873705}
   - {fileID: 2622287531915289301}
   - {fileID: 3519754979832079962}
+  - {fileID: 6872994312075610740}
   remoteLayerName: RemotePlayer
   dontDrawLayerName: DontDraw
   playerGraphics: {fileID: 1463520080908841743}
@@ -498,7 +500,7 @@ ConfigurableJoint:
   m_ConnectedBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_ConnectedAnchor: {x: 0, y: 1, z: 0}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
@@ -616,6 +618,8 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   maxHealth: 100
+  kills: 0
+  deaths: 0
   disableOnDeath:
   - {fileID: 1463520080270979156}
   - {fileID: 204813325113943375}
@@ -687,6 +691,18 @@ MonoBehaviour:
     fireRate: 10
     graphics: {fileID: 5769694334553480838, guid: 24ada4a5365a49744bea87258f2c3bd9,
       type: 3}
+--- !u!114 &6872994312075610740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463520080270979157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be750efa9df50f47b65ae156053d149, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1463520080908841743
 GameObject:
   m_ObjectHideFlags: 0

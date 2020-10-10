@@ -44,22 +44,24 @@ public class Login : MonoBehaviour {
     }
 
     //Called by Button Pressed Methods. These use DatabaseControl namespace to communicate with server.
-    IEnumerator LoginUser ()
+    IEnumerator LoginUser()
     {
-        IEnumerator e = DCF.Login(UserAccountManager.LoggedIn_Username, UserAccountManager.LoggedIn_Password); // << Send request to login, providing username and password
+        IEnumerator e = DCF.Login(Login_UsernameField.text, Login_PasswordField.text); // << Send request to login, providing username and password
         while (e.MoveNext())
         {
             yield return e.Current;
         }
         string response = e.Current as string; // << The returned string from the request
 
+        Debug.Log(response);
         if (response == "Success")
         {
             //Username and Password were correct. Stop showing 'Loading...' and show the LoggedIn UI. And set the text to display the username.
+            UserAccountManager.instance.LogIn(Login_UsernameField.text, Login_PasswordField.text);
             ResetAllUIElements();
-            loadingParent.gameObject.SetActive(false);
-            SceneManager.LoadScene("Lobby");
-        } else
+            loadingParent.gameObject.SetActive(false);           
+        }
+        else
         {
             //Something went wrong logging in. Stop showing 'Loading...' and go back to LoginUI
             loadingParent.gameObject.SetActive(false);
@@ -68,13 +70,15 @@ public class Login : MonoBehaviour {
             {
                 //The Username was wrong so display relevent error message
                 Login_ErrorText.text = "Error: Username not Found";
-            } else
+            }
+            else
             {
                 if (response == "PassError")
                 {
                     //The Password was wrong so display relevent error message
                     Login_ErrorText.text = "Error: Password Incorrect";
-                } else
+                }
+                else
                 {
                     //There was another error. This error message should never appear, but is here just in case.
                     Login_ErrorText.text = "Error: Unknown Error. Please try again later.";
@@ -84,21 +88,22 @@ public class Login : MonoBehaviour {
     }
     IEnumerator RegisterUser()
     {
-        IEnumerator e = DCF.RegisterUser(UserAccountManager.LoggedIn_Username, UserAccountManager.LoggedIn_Password, "Hello World"); // << Send request to register a new user, providing submitted username and password. It also provides an initial value for the data string on the account, which is "Hello World".
+        IEnumerator e = DCF.RegisterUser(Register_UsernameField.text, Register_PasswordField.text, "[KILLS]0/[DEATH]0"); // << Send request to register a new user, providing submitted username and password. It also provides an initial value for the data string on the account, which is "Hello World".
         while (e.MoveNext())
         {
             yield return e.Current;
         }
         string response = e.Current as string; // << The returned string from the request
 
+        Debug.Log(response);
         if (response == "Success")
         {
             //Username and Password were valid. Account has been created. Stop showing 'Loading...' and show the loggedIn UI and set text to display the username.
-            ResetAllUIElements();
+            UserAccountManager.instance.LogIn(Register_UsernameField.text, Register_PasswordField.text);
+            ResetAllUIElements();            
             loadingParent.gameObject.SetActive(false);
-            
-            SceneManager.LoadScene("Lobby");
-        } else
+        }
+        else
         {
             //Something went wrong logging in. Stop showing 'Loading...' and go back to RegisterUI
             loadingParent.gameObject.SetActive(false);
@@ -107,7 +112,8 @@ public class Login : MonoBehaviour {
             {
                 //The username has already been taken. Player needs to choose another. Shows error message.
                 Register_ErrorText.text = "Error: Username Already Taken";
-            } else
+            }
+            else
             {
                 //There was another error. This error message should never appear, but is here just in case.
                 Register_ErrorText.text = "Error: Unknown Error. Please try again later.";
@@ -115,17 +121,16 @@ public class Login : MonoBehaviour {
         }
     }
     //UI Button Pressed Methods
-    public void Login_LoginButtonPressed ()
+    public void Login_LoginButtonPressed()
     {
         //Called when player presses button to Login
 
         //Get the username and password the player entered
-        UserAccountManager.instance.LogIn(Login_UsernameField.text, Login_PasswordField.text);
 
         //Check the lengths of the username and password. (If they are wrong, we might as well show an error now instead of waiting for the request to the server)
-        if (UserAccountManager.LoggedIn_Username.Length > 3)
+        if (Login_UsernameField.text.Length > 3)
         {
-            if (UserAccountManager.LoggedIn_Password.Length > 5)
+            if (Login_PasswordField.text.Length > 5)
             {
                 //Username and password seem reasonable. Change UI to 'Loading...'. Start the Coroutine which tries to log the player in.
                 loginParent.gameObject.SetActive(false);
@@ -137,34 +142,34 @@ public class Login : MonoBehaviour {
                 //Password too short so it must be wrong
                 Login_ErrorText.text = "Error: Password Incorrect";
             }
-        } else
+        }
+        else
         {
             //Username too short so it must be wrong
             Login_ErrorText.text = "Error: Username Incorrect";
         }
     }
-    public void Login_RegisterButtonPressed ()
+    public void Login_RegisterButtonPressed()
     {
         //Called when the player hits register on the Login UI, so switches to the Register UI
         ResetAllUIElements();
         loginParent.gameObject.SetActive(false);
         registerParent.gameObject.SetActive(true);
     }
-    public void Register_RegisterButtonPressed ()
+    public void Register_RegisterButtonPressed()
     {
         //Called when the player presses the button to register
 
         //Get the username and password and repeated password the player entered
-        UserAccountManager.instance.LogIn(Register_UsernameField.text, Register_PasswordField.text); 
         string confirmedPassword = Register_ConfirmPasswordField.text;
 
         //Make sure username and password are long enough
-        if (UserAccountManager.LoggedIn_Username.Length > 3)
+        if (Register_UsernameField.text.Length > 3)
         {
-            if (UserAccountManager.LoggedIn_Password.Length > 5)
+            if (Register_PasswordField.text.Length > 5)
             {
                 //Check the two passwords entered match
-                if (UserAccountManager.LoggedIn_Password == confirmedPassword)
+                if (Register_PasswordField.text == confirmedPassword)
                 {
                     //Username and passwords seem reasonable. Switch to 'Loading...' and start the coroutine to try and register an account on the server
                     registerParent.gameObject.SetActive(false);
@@ -189,7 +194,7 @@ public class Login : MonoBehaviour {
             Register_ErrorText.text = "Error: Username too Short";
         }
     }
-    public void Register_BackButtonPressed ()
+    public void Register_BackButtonPressed()
     {
         //Called when the player presses the 'Back' button on the register UI. Switches back to the Login UI
         ResetAllUIElements();

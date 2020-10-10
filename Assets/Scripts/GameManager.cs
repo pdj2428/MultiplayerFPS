@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -53,6 +54,10 @@ public class GameManager : MonoBehaviour
         return players[_playerID];
     }
 
+    public static Player[] GetAllPlayers ()
+    {
+        return players.Values.ToArray();
+    }
     /*private void OnGUI()
     {
         GUILayout.BeginArea(new Rect(200, 200, 200, 500));

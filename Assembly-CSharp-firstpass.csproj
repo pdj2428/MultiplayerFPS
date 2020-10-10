@@ -426,9 +426,6 @@
     <Reference Include="UnityEngine.XRModule">
       <HintPath>C:/Unity/2019.2.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
-    <Reference Include="DatabaseControl">
-      <HintPath>C:/Users/dj521/OneDrive/Desktop/MultiPlayerFPS/MultiplayerFPS/Assets/Database Control Free/Scripts/DatabaseControl.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.CecilX">
       <HintPath>C:/Users/dj521/OneDrive/Desktop/MultiPlayerFPS/MultiplayerFPS/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.dll</HintPath>
     </Reference>
@@ -440,6 +437,9 @@
     </Reference>
     <Reference Include="Mono.CecilX.Rocks">
       <HintPath>C:/Users/dj521/OneDrive/Desktop/MultiPlayerFPS/MultiplayerFPS/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="DatabaseControl">
+      <HintPath>C:/Users/dj521/OneDrive/Desktop/MultiPlayerFPS/MultiplayerFPS/Assets/Database Control Free/Scripts/DatabaseControl.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Unity/2019.2.17f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -804,10 +804,6 @@
       <Project>{169C2A82-4D96-438F-CF92-164875F979E3}</Project>
       <Name>Mirror.Websocket</Name>
     </ProjectReference>
-    <ProjectReference Include="Mirror.Examples.csproj">
-      <Project>{98FCA93F-0EE6-0553-84B9-FE1F92485F85}</Project>
-      <Name>Mirror.Examples</Name>
-    </ProjectReference>
     <ProjectReference Include="Mirror.CompilerSymbols.csproj">
       <Project>{22C3D3A4-81AB-EE05-D5FE-D69AF597316D}</Project>
       <Name>Mirror.CompilerSymbols</Name>
@@ -824,25 +820,13 @@
       <Project>{CA8BD983-C945-C4DE-E36B-F7B360EDBEDE}</Project>
       <Name>Telepathy</Name>
     </ProjectReference>
-    <ProjectReference Include="Mirror.Examples.Cloud.Pong.csproj">
-      <Project>{8E9E902E-612C-ADF0-0B85-AF687AED800F}</Project>
-      <Name>Mirror.Examples.Cloud.Pong</Name>
-    </ProjectReference>
     <ProjectReference Include="Mirror.csproj">
       <Project>{DB00352F-FB04-8BB3-899D-27A21DB91E99}</Project>
       <Name>Mirror</Name>
     </ProjectReference>
-    <ProjectReference Include="Mirror.example.RigidbodyPhysics.csproj">
-      <Project>{38DF5C23-A756-0FF6-1D82-3A824A6646FC}</Project>
-      <Name>Mirror.example.RigidbodyPhysics</Name>
-    </ProjectReference>
     <ProjectReference Include="Mirror.Editor.csproj">
       <Project>{06871434-5973-875B-4B5D-059871F6A839}</Project>
       <Name>Mirror.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Examples.Cloud.GUI.csproj">
-      <Project>{DB1DAB1C-42E9-AE35-4A4C-3B24FE044339}</Project>
-      <Name>Mirror.Examples.Cloud.GUI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

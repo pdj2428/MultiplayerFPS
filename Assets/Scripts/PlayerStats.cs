@@ -15,12 +15,11 @@ public class PlayerStats : MonoBehaviour {
 
 	void OnReceivedData (string data)
 	{
-		Debug.Log(data);
-		/*if (killCount == null || deathCount == null)
+		if (killCount == null || deathCount == null)
 			return;
 
 		killCount.text = DataTranslator.DataToKills(data).ToString() + " KILLS";
-		deathCount.text = DataTranslator.DataToDeaths(data).ToString() + " DEATHS";*/
+		deathCount.text = DataTranslator.DataToDeaths(data).ToString() + " DEATHS";
 	}
 	
 }
