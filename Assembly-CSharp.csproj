@@ -65,11 +65,11 @@
   <ItemGroup>
     <Compile Include="Assets\Database Control Free\Demos\C#\Scripts\DCF_DemoScene_ManagerScript_CSharp.cs" />
     <Compile Include="Assets\MyButton.cs" />
-    <Compile Include="Assets\PlayerScoreboardItem.cs" />
-    <Compile Include="Assets\Scoreboard.cs" />
     <Compile Include="Assets\Scripts\DataTranslator.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\HostGame.cs" />
+    <Compile Include="Assets\Scripts\Killfeed.cs" />
+    <Compile Include="Assets\Scripts\KillfeedItem.cs" />
     <Compile Include="Assets\Scripts\Login.cs" />
     <Compile Include="Assets\Scripts\MatchSettings.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
@@ -77,11 +77,13 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerMotor.cs" />
     <Compile Include="Assets\Scripts\PlayerScore.cs" />
+    <Compile Include="Assets\Scripts\PlayerScoreboardItem.cs" />
     <Compile Include="Assets\Scripts\PlayerSetup.cs" />
     <Compile Include="Assets\Scripts\PlayerShoot.cs" />
     <Compile Include="Assets\Scripts\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\PlayerUI.cs" />
     <Compile Include="Assets\Scripts\PlayerWeapon.cs" />
+    <Compile Include="Assets\Scripts\Scoreboard.cs" />
     <Compile Include="Assets\Scripts\UserAccount_Lobby.cs" />
     <Compile Include="Assets\Scripts\UserAccountManager.cs" />
     <Compile Include="Assets\Scripts\Util.cs" />
@@ -305,6 +307,9 @@
     <Reference Include="UnityEngine.XRModule">
       <HintPath>C:/Unity/2019.2.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
+    <Reference Include="DatabaseControl">
+      <HintPath>C:/Users/dj521/OneDrive/Desktop/MultiPlayerFPS/MultiplayerFPS/Assets/Database Control Free/Scripts/DatabaseControl.dll</HintPath>
+    </Reference>
     <Reference Include="Mono.CecilX">
       <HintPath>C:/Users/dj521/OneDrive/Desktop/MultiPlayerFPS/MultiplayerFPS/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.dll</HintPath>
     </Reference>
@@ -316,9 +321,6 @@
     </Reference>
     <Reference Include="Mono.CecilX.Rocks">
       <HintPath>C:/Users/dj521/OneDrive/Desktop/MultiPlayerFPS/MultiplayerFPS/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll</HintPath>
-    </Reference>
-    <Reference Include="DatabaseControl">
-      <HintPath>C:/Users/dj521/OneDrive/Desktop/MultiPlayerFPS/MultiplayerFPS/Assets/Database Control Free/Scripts/DatabaseControl.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Unity/2019.2.17f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
