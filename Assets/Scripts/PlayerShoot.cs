@@ -34,6 +34,14 @@ public class PlayerShoot : NetworkBehaviour
         if (PauseMenu.IsOn)
             return;
 
+        if (currentWeapon.bullets < currentWeapon.maxBullets)
+        {
+            if (Input.GetButtonDown("Reload"))
+            {
+                weaponManager.Reload();
+            }
+        }       
+
         if(currentWeapon.fireRate <= 0)
         {
             if (Input.GetButtonDown("Fire1"))
@@ -89,10 +97,21 @@ public class PlayerShoot : NetworkBehaviour
     [Client]
     void Shoot ()
     {
-        if (!isLocalPlayer)
+        if (!isLocalPlayer || weaponManager.isReloading)
         {
             return;
         }
+
+        if (currentWeapon.bullets <= 0)
+        {
+            weaponManager.Reload();
+            return;
+        }
+
+        currentWeapon.bullets--;
+
+
+        Debug.Log("Ramaining bullets: " + currentWeapon.bullets);
 
         //We are shooting, call the OnShoot method on the server
         CmdOnShoot();
@@ -109,6 +128,11 @@ public class PlayerShoot : NetworkBehaviour
             // We hit something, call the OnHit method on the Server
             CmdOnHit(_hit.point, _hit.normal);
         }
+
+        if(currentWeapon.bullets <= 0)
+        {
+            weaponManager.Reload();
+        }
     }
 
     [Command]
@@ -120,4 +144,3 @@ public class PlayerShoot : NetworkBehaviour
         _player.RpcTakeDamage(_damage, _sourcePlayerID);
     }
 }
-//
